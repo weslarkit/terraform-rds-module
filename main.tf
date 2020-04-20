@@ -47,7 +47,7 @@ variable "password" {
   default = "PASSWORD123123123"
   description = "Password to access RDS"
 }
-varaiable "port" {
+variable "port" {
   default = "5432"
   description = "Port for access to RDS"
 }
