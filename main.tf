@@ -24,7 +24,7 @@ variable "storage" {
   description = "Storage for this RDS instance in GBs"
 }
 variable "backup_retention" {
-  default = "7"
+  default = null
   description = "How long in days to retain backups"
 }
 variable "skip_final_snapshot" {
