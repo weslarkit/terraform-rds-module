@@ -16,7 +16,7 @@ variable "rds_vpc_id" {
   description = "Our default RDS virtual private cloud (rds_vpc)."
 }
 variable "rds_public_subnet_group" {
-  default = "default-vpc-XXXXXXXX"
+  default = null
   description = "Apparently the group name, according to the RDS launch wizard."
 }
 variable "storage" {
