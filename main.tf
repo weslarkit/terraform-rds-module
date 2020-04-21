@@ -48,11 +48,13 @@ variable "multi_az" {
   description = "Should RDS live in multiple AZs"
 }
 variable "username" {
-  default = "adminuser"
+  #default = "adminuser"
+  default = null
   description = "User name to access RDS"
 }
 variable "password" {
-  default = "PASSWORD123123123"
+  #default = "PASSWORD123123123"
+  default = null
   description = "Password to access RDS"
 }
 variable "port" {
