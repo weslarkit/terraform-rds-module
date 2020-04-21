@@ -1,4 +1,8 @@
 variable rds_sg_id {}
+variable key_id {
+  default = null
+  description = "KMS Key ID"
+}
 variable "dbname" {
   default = "default"
   description = "Name of this RDS instance" 
@@ -73,5 +77,6 @@ resource "aws_db_instance" "default" {
   storage_encrypted        = true # you should always do this
   storage_type             = "gp2"
   vpc_security_group_ids   = [var.rds_sg_id]
+  kms_key_id               = var.key_id
 }
 
