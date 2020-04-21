@@ -3,6 +3,10 @@ variable replica_source {
   default = null
   description = "Source DB to read from"
 }
+variable rds_identifier {
+  default = null
+  description = "Source DB to read from"
+}
 variable key_id {
   default = null
   description = "KMS Key ID"
@@ -67,6 +71,7 @@ variable "public_access" {
 }
 resource "aws_db_instance" "default" {
   allocated_storage        = var.storage
+  identifier               = var.rds_identifier
   replicate_source_db      = var.replica_source
   backup_retention_period  = var.backup_retention
   db_subnet_group_name     = var.rds_public_subnet_group
